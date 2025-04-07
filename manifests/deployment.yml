@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: udaythreetierarchitecturedemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: udaythreetierarchitecturedemo
+  template:
+    metadata:
+      labels:
+        app: udaythreetierarchitecturedemo 
+    spec:
+      containers:
+        - name: udaythreetierarchitecturedemo 
+          image: acr810.azurecr.io/udaythreetierarchitecturedemo
+          ports:
+          - containerPort: 8080
